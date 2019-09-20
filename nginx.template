@@ -32,9 +32,6 @@ http {
 
             proxy_set_header Authorization $s3_auth_token;
             proxy_set_header x-amz-date $aws_date;
-
-            proxy_cache        s3cache;
-            proxy_cache_valid  200 302  24h;
         }
         location /nginx-health {
             access_log off;
