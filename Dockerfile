@@ -17,7 +17,7 @@ RUN apt-get -y install gettext-base curl build-essential libpcre3 libpcre3-dev z
 
 ENV PROXY_PASS="http://ifconfig.co"
 
-COPY ./default.template /etc/nginx/conf.d/default.template
+COPY ./nginx.template /nginx.template
 COPY ./entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
